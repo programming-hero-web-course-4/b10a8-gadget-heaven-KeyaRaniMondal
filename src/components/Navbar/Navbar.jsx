@@ -5,8 +5,8 @@ import { GiSelfLove } from "react-icons/gi";
 const Navbar = () => {
     const link = <>
         <li><NavLink to={'/'}>Home</NavLink></li>
-        <li><NavLink to={'/'}>Statistics</NavLink></li>
-        <li><NavLink to={'/'}>Dashboard</NavLink></li>
+        <li><NavLink to={'/statics'}>Statistics</NavLink></li>
+        <li><NavLink to={'/dashboard'}>Dashboard</NavLink></li>
     </>
     return (
         <div className="navbar mt-10 ml-10">
