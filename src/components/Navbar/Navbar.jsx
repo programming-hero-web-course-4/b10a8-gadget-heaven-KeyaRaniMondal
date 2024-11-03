@@ -9,8 +9,8 @@ const Navbar = () => {
         <li><NavLink to={'/dashboard'}>Dashboard</NavLink></li>
     </>
     return (
-        <div className="navbar mt-10 ml-10">
-            <div className="navbar-start">
+        <div className="navbar bg-[#9538E2] py-14">
+            <div className="navbar-start ml-10">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
                         <svg
@@ -28,20 +28,24 @@ const Navbar = () => {
                     </div>
                     <ul
                         tabIndex={0}
-                        className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow gap-5">
+                        className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow gap-5 text-[#FFFFFF]">
                         {link}
                     </ul>
                 </div>
-                <a className="btn btn-ghost text-xl">Gadget Heaven</a>
+                <a className="btn btn-ghost text-xl text-[#FFFFFF]">Gadget Heaven</a>
             </div>
             <div className="navbar-center hidden lg:flex">
-                <ul className="menu menu-horizontal px-1 gap-5">
+                <ul className="menu menu-horizontal px-1 gap-5 text-[#FFFFFF]">
                     {link}
                 </ul>
             </div>
-            <div className="navbar-end mr-28">
-                <TiShoppingCart className="w-8 h-8 mr-5" />
+            <div className="navbar-end mr-10">
+                <button className="btn btn-circle btn-outline mr-5 bg-[#FFFFFF]">
+                    <TiShoppingCart className="w-8 h-8" />
+                </button>
+                <button className="btn btn-circle btn-outline bg-[#FFFFFF]">
                 <GiSelfLove className="w-8 h-8" />
+                </button>
             </div>
         </div>
     )
