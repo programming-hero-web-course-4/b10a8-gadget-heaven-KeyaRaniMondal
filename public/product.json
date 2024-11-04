@@ -1,0 +1,423 @@
+[
+    {
+      "product_id": 1,
+      "product_title": "Dell Inspiron 15",
+      "product_image": "https://example.com/images/dell_inspiron_15.jpg",
+      "category": "computers",
+      "price": 550.00,
+      "description": "A versatile laptop with a 15.6-inch display and Intel Core i5 processor.",
+      "Specification": [
+        "Intel Core i5",
+        "8GB RAM",
+        "256GB SSD",
+        "15.6-inch display",
+        "Windows 10"
+      ],
+      "availability": true,
+      "rating": 4.2
+    },
+    {
+      "product_id": 2,
+      "product_title": "MacBook Air",
+      "product_image": "https://example.com/images/macbook_air.jpg",
+      "category": "computers",
+      "price": 999.99,
+      "description": "Apple's light and portable laptop with M1 chip.",
+      "Specification": [
+        "Apple M1 chip",
+        "8GB RAM",
+        "256GB SSD",
+        "13.3-inch Retina display",
+        "macOS"
+      ],
+      "availability": true,
+      "rating": 4.8
+    },
+    {
+      "product_id": 3,
+      "product_title": "HP Pavilion 14",
+      "product_image": "https://example.com/images/hp_pavilion_14.jpg",
+      "category": "computers",
+      "price": 650.00,
+      "description": "Powerful laptop with AMD Ryzen processor, ideal for multitasking.",
+      "Specification": [
+        "AMD Ryzen 5",
+        "8GB RAM",
+        "512GB SSD",
+        "14-inch display",
+        "Windows 10"
+      ],
+      "availability": true,
+      "rating": 4.5
+    },
+    {
+      "product_id": 4,
+      "product_title": "Samsung Galaxy S21",
+      "product_image": "https://example.com/images/galaxy_s21.jpg",
+      "category": "phones",
+      "price": 799.99,
+      "description": "Samsung's flagship smartphone with triple camera setup.",
+      "Specification": [
+        "6.2-inch Dynamic AMOLED display",
+        "Exynos 2100",
+        "8GB RAM",
+        "128GB Storage",
+        "4000mAh battery"
+      ],
+      "availability": true,
+      "rating": 4.6
+    },
+    {
+      "product_id": 5,
+      "product_title": "iPhone 13",
+      "product_image": "https://example.com/images/iphone_13.jpg",
+      "category": "phones",
+      "price": 999.99,
+      "description": "Apple's latest smartphone with A15 Bionic chip.",
+      "Specification": [
+        "6.1-inch Super Retina XDR display",
+        "A15 Bionic",
+        "6GB RAM",
+        "128GB Storage",
+        "3240mAh battery"
+      ],
+      "availability": false,
+      "rating": 4.7
+    },
+    {
+      "product_id": 6,
+      "product_title": "Xiaomi Mi Watch",
+      "product_image": "https://example.com/images/mi_watch.jpg",
+      "category": "smartwatches",
+      "price": 99.99,
+      "description": "Affordable smartwatch with heart rate monitor and GPS.",
+      "Specification": [
+        "1.39-inch AMOLED display",
+        "GPS",
+        "Heart Rate Monitor",
+        "Sleep Tracking",
+        "Water Resistant"
+      ],
+      "availability": true,
+      "rating": 4.3
+    },
+    {
+      "product_id": 7,
+      "product_title": "Apple Watch Series 7",
+      "product_image": "https://example.com/images/apple_watch_series_7.jpg",
+      "category": "smartwatches",
+      "price": 399.99,
+      "description": "Apple's newest smartwatch with always-on display.",
+      "Specification": [
+        "1.8-inch Retina display",
+        "GPS",
+        "ECG app",
+        "Blood Oxygen Monitoring",
+        "Water Resistant"
+      ],
+      "availability": true,
+      "rating": 4.9
+    },
+    {
+      "product_id": 8,
+      "product_title": "Anker PowerCore 20000",
+      "product_image": "https://example.com/images/anker_powercore_20000.jpg",
+      "category": "power banks",
+      "price": 49.99,
+      "description": "High capacity portable charger with PowerIQ technology.",
+      "Specification": [
+        "20000mAh",
+        "PowerIQ",
+        "USB-C & Micro-USB input",
+        "Fast Charging"
+      ],
+      "availability": true,
+      "rating": 4.8
+    },
+    {
+      "product_id": 9,
+      "product_title": "RAVPower 10000mAh Power Bank",
+      "product_image": "https://example.com/images/ravpower_10000.jpg",
+      "category": "power banks",
+      "price": 29.99,
+      "description": "Compact power bank with 18W fast charging support.",
+      "Specification": [
+        "10000mAh",
+        "18W Fast Charging",
+        "USB-C & USB-A Output",
+        "LED Indicator"
+      ],
+      "availability": true,
+      "rating": 4.5
+    },
+    {
+      "product_id": 10,
+      "product_title": "Belkin Wireless Charger",
+      "product_image": "https://example.com/images/belkin_wireless_charger.jpg",
+      "category": "chargers",
+      "price": 29.99,
+      "description": "Fast wireless charging for Qi-enabled devices.",
+      "Specification": [
+        "10W Output",
+        "Qi-Certified",
+        "LED Indicator",
+        "Non-Slip Surface"
+      ],
+      "availability": true,
+      "rating": 4.6
+    },
+    {
+      "product_id": 11,
+      "product_title": "Lenovo ThinkPad X1 Carbon",
+      "product_image": "https://example.com/images/thinkpad_x1.jpg",
+      "category": "computers",
+      "price": 1200.00,
+      "description": "Ultra-slim and powerful laptop for business professionals.",
+      "Specification": [
+        "Intel Core i7",
+        "16GB RAM",
+        "512GB SSD",
+        "14-inch display",
+        "Windows 10 Pro"
+      ],
+      "availability": true,
+      "rating": 4.9
+    },
+    {
+      "product_id": 12,
+      "product_title": "ASUS ZenBook 13",
+      "product_image": "https://example.com/images/asus_zenbook_13.jpg",
+      "category": "computers",
+      "price": 850.00,
+      "description": "Compact and stylish ultrabook with a vibrant display.",
+      "Specification": [
+        "Intel Core i5",
+        "8GB RAM",
+        "256GB SSD",
+        "13.3-inch OLED display",
+        "Windows 10"
+      ],
+      "availability": false,
+      "rating": 4.4
+    },
+    {
+      "product_id": 13,
+      "product_title": "Microsoft Surface Laptop 4",
+      "product_image": "https://example.com/images/surface_laptop_4.jpg",
+      "category": "computers",
+      "price": 1100.00,
+      "description": "A lightweight laptop with excellent battery life and performance.",
+      "Specification": [
+        "Intel Core i7",
+        "16GB RAM",
+        "512GB SSD",
+        "13.5-inch PixelSense display",
+        "Windows 10"
+      ],
+      "availability": true,
+      "rating": 4.7
+    },
+    {
+      "product_id": 14,
+      "product_title": "HP Spectre x360",
+      "product_image": "https://example.com/images/hp_spectre_x360.jpg",
+      "category": "computers",
+      "price": 1300.00,
+      "description": "2-in-1 laptop with premium design and long battery life.",
+      "Specification": [
+        "Intel Core i7",
+        "16GB RAM",
+        "512GB SSD",
+        "13.3-inch FHD touchscreen",
+        "Windows 10"
+      ],
+      "availability": true,
+      "rating": 4.8
+    },
+    {
+      "product_id": 15,
+      "product_title": "OnePlus 9",
+      "product_image": "https://example.com/images/oneplus_9.jpg",
+      "category": "phones",
+      "price": 729.99,
+      "description": "Flagship smartphone with Hasselblad camera for mobile.",
+      "Specification": [
+        "6.55-inch Fluid AMOLED display",
+        "Snapdragon 888",
+        "8GB RAM",
+        "128GB Storage",
+        "4500mAh battery"
+      ],
+      "availability": true,
+      "rating": 4.5
+    },
+    {
+      "product_id": 16,
+      "product_title": "Google Pixel 6",
+      "product_image": "https://example.com/images/pixel_6.jpg",
+      "category": "phones",
+      "price": 599.99,
+      "description": "Google's latest smartphone with Tensor processor.",
+      "Specification": [
+        "6.4-inch OLED display",
+        "Google Tensor",
+        "8GB RAM",
+        "128GB Storage",
+        "4600mAh battery"
+      ],
+      "availability": true,
+      "rating": 4.6
+    },
+    {
+      "product_id": 17,
+      "product_title": "Huawei Mate 40 Pro",
+      "product_image": "https://example.com/images/mate_40_pro.jpg",
+      "category": "phones",
+      "price": 899.99,
+      "description": "High-performance smartphone with Leica optics.",
+      "Specification": [
+        "6.76-inch OLED display",
+        "Kirin 9000",
+        "8GB RAM",
+        "256GB Storage",
+        "4400mAh battery"
+      ],
+      "availability": false,
+      "rating": 4.3
+    },
+    {
+      "product_id": 18,
+      "product_title": "Samsung Galaxy Watch 4",
+      "product_image": "https://example.com/images/galaxy_watch_4.jpg",
+      "category": "smartwatches",
+      "price": 249.99,
+      "description": "Advanced smartwatch with body composition analysis.",
+      "Specification": [
+        "1.4-inch AMOLED display",
+        "Wear OS",
+        "Heart Rate Monitor",
+        "Sleep Tracking",
+        "Water Resistant"
+      ],
+      "availability": true,
+      "rating": 4.7
+    },
+    {
+      "product_id": 19,
+      "product_title": "Fitbit Versa 3",
+      "product_image": "https://example.com/images/fitbit_versa_3.jpg",
+      "category": "smartwatches",
+      "price": 199.99,
+      "description": "Health and fitness smartwatch with built-in GPS.",
+      "Specification": [
+        "1.58-inch AMOLED display",
+        "GPS",
+        "Heart Rate Monitor",
+        "Sleep Tracking",
+        "Water Resistant"
+      ],
+      "availability": true,
+      "rating": 4.5
+    },
+    {
+      "product_id": 20,
+      "product_title": "Xiaomi 20000mAh Power Bank 3",
+      "product_image": "https://example.com/images/xiaomi_power_bank_3.jpg",
+      "category": "power banks",
+      "price": 34.99,
+      "description": "High-capacity power bank with dual output for fast charging.",
+      "Specification": [
+        "20000mAh",
+        "18W Fast Charging",
+        "Dual USB Output",
+        "LED Indicator"
+      ],
+      "availability": true,
+      "rating": 4.4
+    },
+    {
+      "product_id": 21,
+      "product_title": "Anker PowerWave Pad",
+      "product_image": "https://example.com/images/anker_powerwave_pad.jpg",
+      "category": "chargers",
+      "price": 15.99,
+      "description": "Wireless charging pad for Qi-enabled devices.",
+      "Specification": [
+        "10W Output",
+        "Qi-Certified",
+        "LED Indicator",
+        "Non-Slip Surface"
+      ],
+      "availability": true,
+      "rating": 4.6
+    },
+    {
+      "product_id": 22,
+      "product_title": "Dell XPS 15",
+      "product_image": "https://example.com/images/dell_xps_15.jpg",
+      "category": "computers",
+      "price": 1500.00,
+      "description": "High-end laptop with stunning 4K display for creators.",
+      "Specification": [
+        "Intel Core i7",
+        "16GB RAM",
+        "512GB SSD",
+        "15.6-inch 4K display",
+        "Windows 10"
+      ],
+      "availability": true,
+      "rating": 4.9
+    },
+    {
+      "product_id": 23,
+      "product_title": "iPhone 12",
+      "product_image": "https://example.com/images/iphone_12.jpg",
+      "category": "phones",
+      "price": 699.99,
+      "description": "Apple's smartphone with advanced dual-camera system.",
+      "Specification": [
+        "6.1-inch Super Retina XDR display",
+        "A14 Bionic",
+        "4GB RAM",
+        "64GB Storage",
+        "2815mAh battery"
+      ],
+      "availability": true,
+      "rating": 4.8
+    },
+    {
+      "product_id": 24,
+      "product_title": "Realme Watch 2 Pro",
+      "product_image": "https://example.com/images/realme_watch_2_pro.jpg",
+      "category": "smartwatches",
+      "price": 50.00,
+      "description": "Budget-friendly smartwatch with SpO2 sensor.",
+      "Specification": [
+        "1.75-inch LCD display",
+        "GPS",
+        "Heart Rate Monitor",
+        "Sleep Tracking",
+        "Water Resistant"
+      ],
+      "availability": true,
+      "rating": 4.2
+    },
+    {
+      "product_id": 25,
+      "product_title": "Oppo Reno 6",
+      "product_image": "https://example.com/images/oppo_reno_6.jpg",
+      "category": "phones",
+      "price": 499.99,
+      "description": "Sleek and powerful smartphone with fast charging.",
+      "Specification": [
+        "6.43-inch AMOLED display",
+        "Dimensity 900",
+        "8GB RAM",
+        "128GB Storage",
+        "4300mAh battery"
+      ],
+      "availability": false,
+      "rating": 4.5
+    }
+  ]
+  
