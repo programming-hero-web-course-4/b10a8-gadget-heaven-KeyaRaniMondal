@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 const AllGadegts = ({ gadgets }) => {
     if (!gadgets) {
@@ -16,7 +17,9 @@ const AllGadegts = ({ gadgets }) => {
     <h2 className="card-title">{product_title}</h2>
     <p>{price}</p>
     <div className="card-actions justify-start">
-    <button className="btn btn-outline btn-secondary rounded-full">View Details</button>
+       <Link to={`/gadgets/${product_id}`}>
+       <button className="btn btn-outline btn-secondary rounded-full">View Details</button>
+       </Link>
     </div>
   </div>
 </div>
