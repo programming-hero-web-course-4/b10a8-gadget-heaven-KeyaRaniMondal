@@ -2,7 +2,7 @@
     {
       "product_id": 1,
       "product_title": "Dell Inspiron 15",
-      "product_image": "https://example.com/images/dell_inspiron_15.jpg",
+      "product_image": "https://i.ibb.co.com/hL0nGNB/dell.jpg",
       "category": "computers",
       "price": 550.00,
       "description": "A versatile laptop with a 15.6-inch display and Intel Core i5 processor.",
@@ -19,7 +19,7 @@
     {
       "product_id": 2,
       "product_title": "MacBook Air",
-      "product_image": "https://example.com/images/macbook_air.jpg",
+      "product_image": "https://i.ibb.co.com/Fh7LMJc/mac-Book-Air.jpg",
       "category": "computers",
       "price": 999.99,
       "description": "Apple's light and portable laptop with M1 chip.",
@@ -36,7 +36,7 @@
     {
       "product_id": 3,
       "product_title": "HP Pavilion 14",
-      "product_image": "https://example.com/images/hp_pavilion_14.jpg",
+      "product_image": "https://i.ibb.co.com/pR1wftg/hp14.jpg",
       "category": "computers",
       "price": 650.00,
       "description": "Powerful laptop with AMD Ryzen processor, ideal for multitasking.",
