@@ -28,4 +28,4 @@ const Categories=()=>{
     </div>
     )
 }
-export default Categories //ml-48  justify-end
+export default Categories 

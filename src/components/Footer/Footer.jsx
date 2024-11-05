@@ -1,7 +1,13 @@
 const Footer=()=>{
     return(
-        <div>
-            <footer className="footer bg-base-200 text-base-content p-10">
+        <div className="bg-base-200 text-base-content p-10 mt-10">
+                     <div className="text-center mb-10">
+            <h1 className="text-2xl font-bold mb-1">Gadget Heaven</h1>
+            <p>Leading the way in cutting-edge technology and innovation.</p>
+            </div>
+            <hr /> 
+            <footer className="footer mt-5">
+
   <nav>
     <h6 className="footer-title">Services</h6>
     <a className="link link-hover">Branding</a>

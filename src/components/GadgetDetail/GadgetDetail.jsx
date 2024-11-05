@@ -1,6 +1,8 @@
 import { useLoaderData, useParams } from "react-router-dom"
 import { GiSelfLove } from "react-icons/gi";
 import { TiShoppingCart } from "react-icons/ti";
+import { addWish } from "../../utility/utility";
+import  { Toaster } from 'react-hot-toast';
 
 
 const GadgetDetail = () => {
@@ -8,8 +10,13 @@ const GadgetDetail = () => {
     const data = useLoaderData();
     const gadget = data.find(gadget => gadget.product_id === parseInt(product_id))
     const { product_title, product_image, category, price, description, Specification, availability, rating } = gadget;
+
+    const handleWish=gadget=>{
+        addWish(gadget)
+    }
     return (
         <div className="static ">
+            <Toaster />
             <div className="text-center bg-[#9538E2] pb-32">
                 <h1 className="text-2xl font-bold text-[#FFFFFF]">Product Details</h1>
                 <p className="text-[#FFFFFF]">Explore the latest gadgets that will take your experience to the next level. From smart devices to the coolest accessories, we have it all!</p>
@@ -28,7 +35,7 @@ const GadgetDetail = () => {
                         <p> <li>{Specification}</li></p>
                         <p><span className="font-bold">Rating ⭐: </span>{rating}</p>
                         <button className="btn btn-active text-[#FFFFFF] rounded-full bg-[#9538E2]">Add To Card <TiShoppingCart /></button>
-                        <button className="btn btn-circle btn-outline bg-[#FFFFFF]">
+                        <button onClick={()=>handleWish(gadget)} className="btn btn-circle btn-outline bg-[#FFFFFF]">
                             <GiSelfLove className="w-4 h-4" />
                         </button>
                     </div>
