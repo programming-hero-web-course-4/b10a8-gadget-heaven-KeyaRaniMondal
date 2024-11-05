@@ -1,8 +1,9 @@
 import { useLoaderData, useParams } from "react-router-dom"
 import { GiSelfLove } from "react-icons/gi";
 import { TiShoppingCart } from "react-icons/ti";
-import { addWish } from "../../utility/utility";
-import  { Toaster } from 'react-hot-toast';
+import { addWish, getAllwish } from "../../utility/utility";
+import { Toaster } from 'react-hot-toast';
+import { useEffect, useState } from "react";
 
 
 const GadgetDetail = () => {
@@ -10,9 +11,18 @@ const GadgetDetail = () => {
     const data = useLoaderData();
     const gadget = data.find(gadget => gadget.product_id === parseInt(product_id))
     const { product_title, product_image, category, price, description, Specification, availability, rating } = gadget;
-
-    const handleWish=gadget=>{
+    const [iswish, setIswish] = useState(false)
+    useEffect(()=>{
+const wishlist=getAllwish()
+const isExist=wishlist.find(it => it.product_id === gadget.product_id);
+if(isExist)
+{
+    setIswish(true)
+}
+    },[])
+    const handleWish = gadget => {
         addWish(gadget)
+        setIswish(true)
     }
     return (
         <div className="static ">
@@ -35,7 +45,7 @@ const GadgetDetail = () => {
                         <p> <li>{Specification}</li></p>
                         <p><span className="font-bold">Rating ⭐: </span>{rating}</p>
                         <button className="btn btn-active text-[#FFFFFF] rounded-full bg-[#9538E2]">Add To Card <TiShoppingCart /></button>
-                        <button onClick={()=>handleWish(gadget)} className="btn btn-circle btn-outline bg-[#FFFFFF]">
+                        <button disabled={iswish} onClick={() => handleWish(gadget)} className="btn btn-circle btn-outline bg-[#FFFFFF]">
                             <GiSelfLove className="w-4 h-4" />
                         </button>
                     </div>
