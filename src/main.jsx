@@ -11,6 +11,7 @@ import Root from './components/Root/Root';
 import Home from './components/Home/Home';
 import Dashboard from './components/dashboard/Dashboard';
 import GadgetDetail from './components/GadgetDetail/GadgetDetail';
+import ButtonCards from './components/ButtonCards/ButtonCards';
 
 
 const router = createBrowserRouter([

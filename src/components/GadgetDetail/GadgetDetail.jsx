@@ -7,12 +7,12 @@ const GadgetDetail = () => {
     const gadget = data.find(gadget => gadget.product_id === parseInt(product_id))
     const { product_title, product_image, category, price, description, Specification, availability, rating } = gadget;
     return (
-        <div>
-            <div>
-                <h1 className="text-2xl">Product Details</h1>
+        <div className="static">
+            <div className="text-center bg-[#9538E2] pb-32">
+                <h1 className="text-2xl font-bold">Product Details</h1>
                 <p>Explore the latest gadgets that will take your experience to the next level. From smart devices to the coolest accessories, we have it all!</p>
             </div>
-            <div className="hero bg-[#FFFFFF] h-96 min-w-full my-20">
+            <div className="hero bg-[#FFFFFF] h-96 min-w-full  border-2">
                 <div className="hero-content flex-col lg:flex-row">
                     <img
                         src={product_image}
