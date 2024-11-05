@@ -1,36 +1,26 @@
 import { Link, useLoaderData, useParams } from "react-router-dom";
 import ButtonCards from "../ButtonCards/ButtonCards";
+import { useEffect, useState } from "react";
 
-const AllGadegts = () => {                //{ gadgets }
+const AllGadegts = () => {                
   const data=useLoaderData();
   const {category}=useParams();
   console.log(data)
-  // if (!gadgets) {
-  //   return null;
-  // }
-  // const { product_id, product_title, category, price, product_image } = gadgets;
-  // console.log(gadgets)
+const [product,setProduct]=useState([])
+useEffect(()=>{
+ if(category)
+ {
+  const filteredCategory=[...data].filter(gadget=>gadget.category===category)
+  setProduct(filteredCategory)
+ }
+ else{
+  setProduct(data)
+ }
+},[category,data])
   return (
-    // <div className="card bg-base-100 w-72 mt-5 shadow-xl">
-    //   <figure>
-    //     <img
-    //       src={product_image}
-    //       alt="Shoes" className="h-48 w-64 object-cover" />
-    //   </figure>
-    //   <div className="card-body">
-    //     <h2 className="card-title">{product_title}</h2>
-    //     <p>{price}</p>
-    //     <div className="card-actions justify-start">
-    //       <Link to={`/gadgets/${product_id}`}>
-    //         <button className="btn btn-outline btn-secondary rounded-full">View Details</button>
-    //       </Link>
-    //     </div>
-    //   </div>
-    // </div>
-
-    <div>
+    <div className="grid grid-cols-3 gap-y-3 gap-x-8">
 {
-  data.map(gadget=>(<ButtonCards key={gadget.product_id} gadget={gadget}></ButtonCards>))
+  product.map(gadget=>(<ButtonCards key={gadget.product_id} gadget={gadget}></ButtonCards>))
 }
     </div>
   )
