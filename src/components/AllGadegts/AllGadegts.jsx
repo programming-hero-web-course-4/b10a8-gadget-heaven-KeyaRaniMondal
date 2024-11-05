@@ -5,7 +5,7 @@ const AllGadegts = ({ gadgets }) => {
     return null;
   }
   const { product_id, product_title, category, price, product_image } = gadgets;
-  console.log(gadgets)
+  // console.log(gadgets)
   return (
     <div className="card bg-base-100 w-72 mt-5 shadow-xl">
       <figure>
