@@ -13,7 +13,7 @@ const Dashboard = () => {
 
     const handleWishlistClick = () => {
         setShowWishlist(!showWishlist);
-        setShowCart(false); 
+        setShowCart(false);
     };
 
     // for cart
@@ -27,37 +27,56 @@ const Dashboard = () => {
 
     const handleCartClick = () => {
         setShowCart(!showCart);
-        setShowWishlist(false); 
+        setShowWishlist(false);
     };
+
+const totalCost = gadgets.reduce((acc, gadget) => acc + (gadget.price || 0), 0);
 
     return (
         <div>
-            <div className="text-center bg-[#9538E2] pb-14">
-                <h1 className="text-3xl font-bold">Dashboard</h1>
-                <p>Explore the latest gadgets that will take your experience to the next level. From smart devices to the coolest accessories, we have it all!</p>
-                <div className="flex gap-5 justify-center">
-                    <button onClick={handleCartClick} className="btn rounded-full">Cart</button>
-                    <button onClick={handleWishlistClick} className="btn btn-outline  rounded-full text-white">
-                        Wishlist
-                    </button>
+            <div>
+                <div className="text-center bg-[#9538E2] pb-14">
+                    <h1 className="text-3xl font-bold">Dashboard</h1>
+                    <p>Explore the latest gadgets that will take your experience to the next level. From smart devices to the coolest accessories, we have it all!</p>
+                    <div className="flex gap-5 justify-center">
+                        <button onClick={handleCartClick} className="btn rounded-full">Cart</button>
+                        <button onClick={handleWishlistClick} className="btn btn-outline  rounded-full text-white">
+                            Wishlist
+                        </button>
+                    </div>
                 </div>
+                {showWishlist && (
+                    <div className="grid grid-cols-2">
+                        {gadget.map(gadget => (
+                            <ButtonCards key={gadget.product_id} gadget={gadget} />
+                        ))}
+                    </div>
+                )}
+                {showCart && (
+                    <div>
+                        <div className="flex justify-between my-10">
+                            <h1 className="text-2xl font-bold">Cart</h1>
+                            <div className="flex gap-5">
+                                <p className="mt-5 font-bold">Total cost:${totalCost}</p>
+                                <button className="btn btn-outline bg-[#9538E2] rounded-full text-white">Sort by Price</button>
+                                <button className="btn btn-outline  rounded-full">Purchase</button>
+                            </div>
+                        </div>
+                        <div className="grid grid-cols-2">
+
+                            {gadgets.map(gadget => (
+                                <ButtonCards key={gadget.product_id} gadget={gadget} />
+                            ))}
+                        </div>
+                    </div>
+                )}
             </div>
-            {showWishlist && (
-                <div className="grid grid-cols-2">
-                    {gadget.map(gadget => (
-                        <ButtonCards key={gadget.product_id} gadget={gadget} />
-                    ))}
-                </div>
-            )}
-            {showCart && (
-                <div className="grid grid-cols-2">
-                    {gadgets.map(gadget => (
-                        <ButtonCards key={gadget.product_id} gadget={gadget} />
-                    ))}
-                </div>
-            )}
+
         </div>
     );
 };
 
 export default Dashboard;
+
+
+

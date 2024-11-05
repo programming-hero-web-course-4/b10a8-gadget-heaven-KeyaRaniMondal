@@ -11,7 +11,7 @@ const ButtonCards=({gadget})=>{
       </figure>
       <div className="card-body">
         <h2 className="card-title">{product_title}</h2>
-        <p>{price}</p>
+        <p><span className="font-bold">Price: </span>${price}</p>
         <div className="card-actions justify-start">
           <Link to={`/gadgets/${product_id}`}>
             <button className="btn btn-outline btn-secondary rounded-full">View Details</button>
