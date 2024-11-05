@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 const AllGadegts = () => {                
   const data=useLoaderData();
   const {category}=useParams();
-  console.log(data)
+  // console.log(data)
 const [product,setProduct]=useState([])
 useEffect(()=>{
  if(category)

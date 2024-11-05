@@ -1,7 +1,7 @@
 import { useLoaderData, useParams } from "react-router-dom"
 import { GiSelfLove } from "react-icons/gi";
 import { TiShoppingCart } from "react-icons/ti";
-import { addWish, getAllwish } from "../../utility/utility";
+import { addCart, addWish, getAllCart, getAllwish } from "../../utility/utility";
 import { Toaster } from 'react-hot-toast';
 import { useEffect, useState } from "react";
 
@@ -12,17 +12,30 @@ const GadgetDetail = () => {
     const gadget = data.find(gadget => gadget.product_id === parseInt(product_id))
     const { product_title, product_image, category, price, description, Specification, availability, rating } = gadget;
     const [iswish, setIswish] = useState(false)
-    useEffect(()=>{
-const wishlist=getAllwish()
-const isExist=wishlist.find(it => it.product_id === gadget.product_id);
-if(isExist)
-{
-    setIswish(true)
-}
-    },[])
+    useEffect(() => {
+        const wishlist = getAllwish()
+        const isExist = wishlist.find(it => it.product_id === gadget.product_id);
+        if (isExist) {
+            setIswish(true)
+        }
+    }, [])
     const handleWish = gadget => {
         addWish(gadget)
         setIswish(true)
+    }
+
+
+    const [isCart, setIsCart] = useState(false)
+    useEffect(() => {
+        const cart = getAllCart()
+        const isExist = cart.find(it => it.product_id === gadget.product_id);
+        if (isExist) {
+            setIsCart(true)
+        }
+    }, [])
+    const handleCart = gadgets => {
+        addCart(gadgets)
+        // setIsCart(true)
     }
     return (
         <div className="static ">
@@ -44,7 +57,7 @@ if(isExist)
                         <p className="font-bold">Specification:</p>
                         <p> <li>{Specification}</li></p>
                         <p><span className="font-bold">Rating ⭐: </span>{rating}</p>
-                        <button className="btn btn-active text-[#FFFFFF] rounded-full bg-[#9538E2]">Add To Card <TiShoppingCart /></button>
+                        <button onClick={() => handleCart(gadget)} className="btn btn-active text-[#FFFFFF] rounded-full bg-[#9538E2]">Add To Card <TiShoppingCart /></button>
                         <button disabled={iswish} onClick={() => handleWish(gadget)} className="btn btn-circle btn-outline bg-[#FFFFFF]">
                             <GiSelfLove className="w-4 h-4" />
                         </button>
@@ -55,3 +68,12 @@ if(isExist)
     )
 }
 export default GadgetDetail
+
+
+
+
+
+
+
+
+

@@ -21,25 +21,28 @@ const addWish = (gadgets) => {
     // toast.success('Successfully added!');
 };
 
+
+// For carts
+
 const getAllCart = () => {
-    const all = localStorage.getItem('wishlist');
-    if (all) {
-        const wishlist = JSON.parse(all);
-        return wishlist;
+    const allCart = localStorage.getItem('cart');
+    if (allCart) {
+        const cart = JSON.parse(allCart);
+        return cart;
     } else {
         return [];
     }
 };
 
-const addCart= (gadgets) => {
-    const wishlist = getAllwish();
-    const isExist = wishlist.find(it => it.product_id === gadgets.product_id);
+const addCart= (Cgadgets) => {
+    const cart = getAllCart();
+    const isExist = cart.find(it => it.product_id === Cgadgets.product_id);
     if (isExist) {
         return toast.error('This gadget already exists!');
     }
-    wishlist.push(gadgets);
-    localStorage.setItem('wishlist', JSON.stringify(wishlist));
+    cart.push(Cgadgets);
+    localStorage.setItem('cart', JSON.stringify(cart));
     // toast.success('Successfully added!');
 };
 
-export { addWish, getAllwish };
+export { addWish, getAllwish,addCart,getAllCart };
