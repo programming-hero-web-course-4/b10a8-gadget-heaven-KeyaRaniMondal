@@ -1,4 +1,4 @@
-import toast from "react-hot-toast/headless";
+import toast from "react-hot-toast";
 
 const getAllwish = () => {
     const all = localStorage.getItem('wishlist');
@@ -14,11 +14,11 @@ const addWish = (gadgets) => {
     const wishlist = getAllwish();
     const isExist = wishlist.find(it => it.product_id === gadgets.product_id);
     if (isExist) {
-        return toast.error('This gadget already exists!');
+       toast.error('This gadget already exists!');
     }
     wishlist.push(gadgets);
     localStorage.setItem('wishlist', JSON.stringify(wishlist));
-    // toast.success('Successfully added!');
+    toast.success('Successfully added!');
 };
 
 
@@ -42,7 +42,7 @@ const addCart= (Cgadgets) => {
     }
     cart.push(Cgadgets);
     localStorage.setItem('cart', JSON.stringify(cart));
-    // toast.success('Successfully added!');
+    toast.success('Successfully added!');
 };
 
 export { addWish, getAllwish,addCart,getAllCart };

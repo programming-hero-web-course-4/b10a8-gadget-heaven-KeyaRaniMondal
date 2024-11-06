@@ -55,7 +55,7 @@ const Dashboard = () => {
     return (
         <div>
             <div>
-                <div className="text-center bg-[#9538E2] pb-14">
+                <div className="text-center bg-[#9538E2] pb-14 pt-10">
                     <h1 className="text-3xl font-bold">Dashboard</h1>
                     <p>Explore the latest gadgets that will take your experience to the next level. From smart devices to the coolest accessories, we have it all!</p>
                     <div className="flex gap-5 justify-center">

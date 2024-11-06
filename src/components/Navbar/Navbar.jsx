@@ -1,16 +1,32 @@
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import { TiShoppingCart } from "react-icons/ti";
 import { GiSelfLove } from "react-icons/gi";
 
 const Navbar = () => {
+    const location = useLocation();
+
+    const isHome = location.pathname === '/';
+
+    const navbarStyle = {
+        backgroundColor: isHome ? '#9538E2' : '#FFFFFF',  
+    };
+
+    const logoStyle = {
+        color: isHome? '#FFFFFF' : '#0B0B0B',  
+    };
+
+    const linkStyle = {
+        color: isHome ? '#FFFFFF' : '#0B0B0BB3', 
+    };
+
     const link = <>
-        <li><NavLink to={'/'}>Home</NavLink></li>
-        <li><NavLink to={'/statics'}>Statistics</NavLink></li>
-        <li><NavLink to={'/dashboard'}>Dashboard</NavLink></li>
-        <li><NavLink to={'/contact'}>Contact</NavLink></li>
+        <li><NavLink to={'/'} style={linkStyle}>Home</NavLink></li>
+        <li><NavLink to={'/statics'} style={ linkStyle}>Statistics</NavLink></li>
+        <li><NavLink to={'/dashboard'} style={linkStyle}>Dashboard</NavLink></li>
+        <li><NavLink to={'/contact'} style={linkStyle}>Contact</NavLink></li>
     </>
     return (
-        <div className="navbar bg-[#9538E2] py-14">
+        <nav style={navbarStyle} className="navbar  py-14">
             <div className="navbar-start ml-10">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -33,7 +49,7 @@ const Navbar = () => {
                         {link}
                     </ul>
                 </div>
-                <a className="btn btn-ghost text-xl text-[#FFFFFF]">Gadget Heaven</a>
+                <a className="btn btn-ghost text-xl text-[#FFFFFF]" style={logoStyle}>Gadget Heaven</a>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1 gap-5 text-[#FFFFFF]">
@@ -48,7 +64,11 @@ const Navbar = () => {
                 <GiSelfLove className="w-8 h-8" />
                 </button>
             </div>
-        </div>
+          </nav>
     )
 }
 export default Navbar;
+
+
+
+
