@@ -14,12 +14,14 @@ import GadgetDetail from './components/GadgetDetail/GadgetDetail';
 import ButtonCards from './components/ButtonCards/ButtonCards';
 import AllGadegts from './components/AllGadegts/AllGadegts';
 import Contact from './components/Contact/Contact';
+import Error from './components/Error/Error';
 
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
+    errorElement:<Error></Error>,
     children:[
       {
         path:'/',
