@@ -32,6 +32,11 @@ const Dashboard = () => {
 
 const totalCost = gadgets.reduce((acc, gadget) => acc + (gadget.price || 0), 0);
 
+const handleSort=()=>{
+    const sortPrice=[...gadgets].sort((a,b)=>b.price-a.price);
+    setGadgets(sortPrice);
+}
+
     return (
         <div>
             <div>
@@ -58,7 +63,7 @@ const totalCost = gadgets.reduce((acc, gadget) => acc + (gadget.price || 0), 0);
                             <h1 className="text-2xl font-bold">Cart</h1>
                             <div className="flex gap-5">
                                 <p className="mt-5 font-bold">Total cost:${totalCost}</p>
-                                <button className="btn btn-outline bg-[#9538E2] rounded-full text-white">Sort by Price</button>
+                                <button onClick={handleSort} className="btn btn-outline bg-[#9538E2] rounded-full text-white">Sort by Price</button>
                                 <button className="btn btn-outline  rounded-full">Purchase</button>
                             </div>
                         </div>
