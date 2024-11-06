@@ -88,7 +88,7 @@
       "product_id": 6,
       "product_title": "Xiaomi Mi Watch",
       "product_image": "https://i.ibb.co.com/9vJzJ5y/xiomi.jpg",
-      "category": "smartwatches",
+      "category": "smart watches",
       "price": 99.99,
       "description": "Affordable smartwatch with heart rate monitor and GPS.",
       "Specification": [
@@ -123,7 +123,7 @@
       "product_title": "Anker PowerCore 20000",
       "product_image": "https://i.ibb.co.com/wpQNn6j/power.jpg",
       "category": "power banks",
-      "price": 49.99,
+      "price": 150.99,
       "description": "High capacity portable charger with PowerIQ technology.",
       "Specification": [
         "20000mAh",
@@ -139,7 +139,7 @@
       "product_title": "RAVPower 10000mAh Power Bank",
       "product_image": "https://i.ibb.co.com/bgWdNqC/ravpower.jpg",
       "category": "power banks",
-      "price": 29.99,
+      "price": 104.99,
       "description": "Compact power bank with 18W fast charging support.",
       "Specification": [
         "10000mAh",
@@ -155,7 +155,7 @@
       "product_title": "Belkin Wireless Charger",
       "product_image": "https://i.ibb.co.com/5c2zNPT/belkin.jpg",
       "category": "chargers",
-      "price": 29.99,
+      "price": 80.99,
       "description": "Fast wireless charging for Qi-enabled devices.",
       "Specification": [
         "10W Output",
@@ -289,7 +289,7 @@
       "product_id": 18,
       "product_title": "Samsung Galaxy Watch 4",
       "product_image": "https://i.ibb.co.com/t43yx6B/galaxy.jpg",
-      "category": "smartwatches",
+      "category": "smart watches",
       "price": 249.99,
       "description": "Advanced smartwatch with body composition analysis.",
       "Specification": [
@@ -306,7 +306,7 @@
       "product_id": 19,
       "product_title": "Fitbit Versa 3",
       "product_image": "https://i.ibb.co.com/Y0xTJKw/fiber.jpg",
-      "category": "smartwatches",
+      "category": "smart watches",
       "price": 199.99,
       "description": "Health and fitness smartwatch with built-in GPS.",
       "Specification": [
@@ -324,7 +324,7 @@
       "product_title": "Xiaomi 20000mAh Power Bank 3",
       "product_image": "https://i.ibb.co.com/QQVsN4Y/xopower.jpg",
       "category": "power banks",
-      "price": 34.99,
+      "price": 90.99,
       "description": "High-capacity power bank with dual output for fast charging.",
       "Specification": [
         "20000mAh",
@@ -389,8 +389,8 @@
       "product_id": 24,
       "product_title": "Realme Watch 2 Pro",
       "product_image": "https://i.ibb.co.com/s62sRYt/real12.jpg",
-      "category": "smartwatches",
-      "price": 50.00,
+      "category": "smart watches",
+      "price": 70.00,
       "description": "Budget-friendly smartwatch with SpO2 sensor.",
       "Specification": [
         "1.75-inch LCD display",
@@ -418,6 +418,23 @@
       ],
       "availability": false,
       "rating": 4.5
+    },
+    {
+      "product_id": 26,
+      "product_title": "HK9 ultra 2",
+      "product_image": "https://i.ibb.co.com/9HfZfb8/hk9.jpg",
+      "category": "smart watches",
+      "price": 50.00,
+      "description": "Budget-friendly smartwatch with SpO2 sensor.",
+      "Specification": [
+        "1.75-inch LCD display",
+        "GPS",
+        "Heart Rate Monitor",
+        "Sleep Tracking",
+        "Water Resistant"
+      ],
+      "availability": true,
+      "rating": 4.2
     }
   ]
   

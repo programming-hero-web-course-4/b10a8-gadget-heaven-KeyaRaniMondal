@@ -40,7 +40,7 @@ const GadgetDetail = () => {
     return (
         <div className="static ">
             <Toaster />
-            <div className="text-center bg-[#9538E2] pb-32">
+            <div className="text-center bg-[#9538E2] pb-32 pt-10">
                 <h1 className="text-2xl font-bold text-[#FFFFFF]">Product Details</h1>
                 <p className="text-[#FFFFFF]">Explore the latest gadgets that will take your experience to the next level. From smart devices to the coolest accessories, we have it all!</p>
             </div>

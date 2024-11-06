@@ -47,28 +47,33 @@ const Dashboard = () => {
     };
 
     const handleModalClose = () => {
-        setGadgets([]);
-        setShowModal(false);
-        navigate('/');
+        localStorage.removeItem('cart');
+        setGadgets([]); 
+        setShowModal(false); 
+        navigate('/'); 
     };
+    
 
     return (
         <div>
             <div>
                 <div className="text-center bg-[#9538E2] pb-14 pt-10">
-                    <h1 className="text-3xl font-bold">Dashboard</h1>
-                    <p>Explore the latest gadgets that will take your experience to the next level. From smart devices to the coolest accessories, we have it all!</p>
+                    <h1 className="text-3xl font-bold text-[#FFFFFF]">Dashboard</h1>
+                    <p className="text-[#FFFFFF] mb-5">Explore the latest gadgets that will take your experience to the next level. From smart devices to the coolest accessories, we have it all!</p>
                     <div className="flex gap-5 justify-center">
                         <button onClick={handleCartClick} className="btn rounded-full">Cart</button>
                         <button onClick={handleWishlistClick} className="btn btn-outline rounded-full text-white">Wishlist</button>
                     </div>
                 </div>
                 {showWishlist && (
-                    <div className="grid grid-cols-2">
+                    <div className="ml-40">
+                                            <h1 className="text-2xl font-bold my-10 ml-10">Cart</h1>
+                    <div className="grid grid-cols-2 justify-center">
                         {gadget.map(gadget => (
                             <ButtonCards key={gadget.product_id} gadget={gadget} />
                         ))}
                     </div>
+                        </div>
                 )}
                 {showCart && (
                     <div>
@@ -80,10 +85,7 @@ const Dashboard = () => {
                                 <button
                                     onClick={handlePurchase}
                                     className="btn btn-outline rounded-full"
-                                    disabled={totalCost === 0}
-                                >
-                                    Purchase
-                                </button>
+                                    disabled={totalCost === 0}>Purchase</button>
                             </div>
                         </div>
                         <div className="grid grid-cols-2">
@@ -114,3 +116,6 @@ const Dashboard = () => {
 };
 
 export default Dashboard;
+
+
+

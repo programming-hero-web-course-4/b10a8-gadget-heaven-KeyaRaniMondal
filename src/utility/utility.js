@@ -45,4 +45,6 @@ const addCart= (Cgadgets) => {
     toast.success('Successfully added!');
 };
 
+
+
 export { addWish, getAllwish,addCart,getAllCart };
