@@ -7,6 +7,7 @@ const Navbar = () => {
         <li><NavLink to={'/'}>Home</NavLink></li>
         <li><NavLink to={'/statics'}>Statistics</NavLink></li>
         <li><NavLink to={'/dashboard'}>Dashboard</NavLink></li>
+        <li><NavLink to={'/contact'}>Contact</NavLink></li>
     </>
     return (
         <div className="navbar bg-[#9538E2] py-14">

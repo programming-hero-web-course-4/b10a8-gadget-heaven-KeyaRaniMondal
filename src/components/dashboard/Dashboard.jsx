@@ -3,6 +3,7 @@ import { getAllCart, getAllwish } from "../../utility/utility";
 import ButtonCards from "../ButtonCards/ButtonCards";
 
 const Dashboard = () => {
+    document.title='Gadget Heaven-Dashboard';
     const [gadget, setGadget] = useState([]);
     const [showWishlist, setShowWishlist] = useState(false);
 

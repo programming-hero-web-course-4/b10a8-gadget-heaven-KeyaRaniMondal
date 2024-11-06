@@ -13,6 +13,7 @@ import Dashboard from './components/dashboard/Dashboard';
 import GadgetDetail from './components/GadgetDetail/GadgetDetail';
 import ButtonCards from './components/ButtonCards/ButtonCards';
 import AllGadegts from './components/AllGadegts/AllGadegts';
+import Contact from './components/Contact/Contact';
 
 
 const router = createBrowserRouter([
@@ -46,6 +47,10 @@ const router = createBrowserRouter([
         path:'/dashboard',
         element:<Dashboard></Dashboard>
       },
+      {
+        path:'/contact',
+        element:<Contact></Contact>
+      }
      
     ]
   },
