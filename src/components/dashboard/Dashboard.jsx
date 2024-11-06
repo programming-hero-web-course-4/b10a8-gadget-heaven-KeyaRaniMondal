@@ -1,11 +1,14 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { getAllCart, getAllwish } from "../../utility/utility";
 import ButtonCards from "../ButtonCards/ButtonCards";
+import Group from '../../assets/Group.png';
 
 const Dashboard = () => {
-    document.title='Gadget Heaven-Dashboard';
+    document.title = 'Gadget Heaven-Dashboard';
     const [gadget, setGadget] = useState([]);
     const [showWishlist, setShowWishlist] = useState(false);
+    const navigate = useNavigate();
 
     useEffect(() => {
         const wish = getAllwish();
@@ -17,9 +20,10 @@ const Dashboard = () => {
         setShowCart(false);
     };
 
-    // for cart
+    // Cart
     const [gadgets, setGadgets] = useState([]);
     const [showCart, setShowCart] = useState(false);
+    const [showModal, setShowModal] = useState(false);
 
     useEffect(() => {
         const cart = getAllCart();
@@ -31,12 +35,22 @@ const Dashboard = () => {
         setShowWishlist(false);
     };
 
-const totalCost = gadgets.reduce((acc, gadget) => acc + (gadget.price || 0), 0);
+    const totalCost = gadgets.reduce((acc, gadget) => acc + (gadget.price || 0), 0);
 
-const handleSort=()=>{
-    const sortPrice=[...gadgets].sort((a,b)=>b.price-a.price);
-    setGadgets(sortPrice);
-}
+    const handleSort = () => {
+        const sortedGadgets = [...gadgets].sort((a, b) => b.price - a.price);
+        setGadgets(sortedGadgets);
+    };
+
+    const handlePurchase = () => {
+        setShowModal(true);
+    };
+
+    const handleModalClose = () => {
+        setGadgets([]);
+        setShowModal(false);
+        navigate('/');
+    };
 
     return (
         <div>
@@ -46,9 +60,7 @@ const handleSort=()=>{
                     <p>Explore the latest gadgets that will take your experience to the next level. From smart devices to the coolest accessories, we have it all!</p>
                     <div className="flex gap-5 justify-center">
                         <button onClick={handleCartClick} className="btn rounded-full">Cart</button>
-                        <button onClick={handleWishlistClick} className="btn btn-outline  rounded-full text-white">
-                            Wishlist
-                        </button>
+                        <button onClick={handleWishlistClick} className="btn btn-outline rounded-full text-white">Wishlist</button>
                     </div>
                 </div>
                 {showWishlist && (
@@ -63,13 +75,18 @@ const handleSort=()=>{
                         <div className="flex justify-between my-10">
                             <h1 className="text-2xl font-bold">Cart</h1>
                             <div className="flex gap-5">
-                                <p className="mt-5 font-bold">Total cost:${totalCost}</p>
+                                <p className="mt-5 font-bold">Total cost: ${totalCost}</p>
                                 <button onClick={handleSort} className="btn btn-outline bg-[#9538E2] rounded-full text-white">Sort by Price</button>
-                                <button className="btn btn-outline  rounded-full">Purchase</button>
+                                <button
+                                    onClick={handlePurchase}
+                                    className="btn btn-outline rounded-full"
+                                    disabled={totalCost === 0}
+                                >
+                                    Purchase
+                                </button>
                             </div>
                         </div>
                         <div className="grid grid-cols-2">
-
                             {gadgets.map(gadget => (
                                 <ButtonCards key={gadget.product_id} gadget={gadget} />
                             ))}
@@ -78,11 +95,22 @@ const handleSort=()=>{
                 )}
             </div>
 
+
+            {showModal && (
+                <dialog open className="modal">
+                    <div className="modal-box text-center">
+                        <img src={Group} alt="Success" className="flex justify-center mx-auto" />
+                        <h3 className="font-bold text-lg">Payment Successfully</h3>
+                        <p className="py-4">Thanks for purchasing.</p>
+                        <p>Total: ${totalCost}</p>
+                        <div className="modal-action flex justify-center mx-auto">
+                            <button onClick={handleModalClose} className="btn rounded-full">Close</button>
+                        </div>
+                    </div>
+                </dialog>
+            )}
         </div>
     );
 };
 
 export default Dashboard;
-
-
-
